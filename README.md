@@ -4,22 +4,14 @@ Code and feature data for the study *Evaluating Behavioural Ransomware
 Detection: Same-Target Event Relations and the Impact of Negative Set
 Construction*.
 
-The project executes ransomware and benign programs in a CAPEv2 sandbox,
-extracts behavioural features from the analysis reports, and trains a
-gradient-boosted tree classifier. It asks two questions:
-
-1. **How much does a reported false positive rate depend on how the benign /
-   negative set was assembled**, rather than on the detector itself?
-2. **When a plain count of activity no longer separates ransomware from benign
-   software, does a feature describing the *relation* between two events on the
-   same file still separate them** — and does the *order* of behaviours add
-   anything beyond their presence?
-
-The headline results: holding the model and features fixed, changing only the
-training negatives moved the false positive rate from 0.667 to 0.000; and in a
-scale-shifted band where counts carry no information, count-valued features
-reached a false positive rate of 0.311 while same-target relational features
-reached 0.030.
+The project runs ransomware and benign programs in a CAPEv2 sandbox, extracts
+behavioural features from the reports, and trains a gradient-boosted tree
+classifier. It looks at two things: how much a reported false positive rate
+depends on how the benign set was assembled rather than on the detector itself,
+and whether a feature describing the relation between two events on the same
+file separates ransomware from benign software when a plain activity count no
+longer can. The order experiment is a negative result, and the paper explains
+why.
 
 ## Repository structure
 
