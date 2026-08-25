@@ -1,0 +1,18 @@
+# Core: dataset construction, model training, evaluation, figures
+numpy
+scikit-learn
+xgboost
+matplotlib
+
+# Static analysis (import-table features)
+pefile
+
+# HTTP collection (fetch installers, MalwareBazaar)
+requests
+
+# Decoy-document generation (make_documents.py) and packed archives
+python-docx
+python-pptx
+openpyxl
+Pillow
+pyzipper

@@ -1,0 +1,6 @@
+* text=auto
+
+# Data CSVs cannot be merged line by line. Left to git, a rebase silently
+# writes conflict markers into them, which broke the manifest once.
+data/*.csv -merge
+data/manifests/*.csv -merge
